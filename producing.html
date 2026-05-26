@@ -7,18 +7,18 @@
     <style>
         body { margin: 0; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; background-color: #111; color: #fff; line-height: 1.6; }
         
-        /* 상단 메뉴바 (메인과 동일) */
+        /* 상단 메뉴바 */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(0, 0, 0, 0.8); position: fixed; width: 100%; box-sizing: border-box; top: 0; z-index: 1000; backdrop-filter: blur(5px); border-bottom: 1px solid #333; }
         .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; }
         nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
         nav a:hover { color: #f4a261; }
 
-        /* 서브페이지 전용 상단 타이틀 영역 (메인보다 높이가 낮음) */
+        /* 서브페이지 전용 상단 타이틀 영역 */
         .sub-hero { 
-            height: 40vh; /* 화면 높이의 40%만 차지 */
+            height: 40vh; 
             display: flex; align-items: center; justify-content: center; 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1600&q=80') center/cover; 
-            margin-top: 70px; /* 메뉴바 두께만큼 띄움 */
+            margin-top: 70px; 
         }
         .sub-hero h1 { font-size: 40px; letter-spacing: 2px; color: #f4a261; }
 
@@ -31,7 +31,7 @@
         .back-btn { display: inline-block; margin-top: 50px; padding: 12px 25px; background: #333; color: #fff; text-decoration: none; border-radius: 5px; transition: 0.3s; }
         .back-btn:hover { background: #f4a261; color: #000; }
 
-        /* 푸터 (메인과 동일) */
+        /* 푸터 */
         footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
         footer span { color: #888; }
     </style>
