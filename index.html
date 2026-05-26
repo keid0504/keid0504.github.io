@@ -59,11 +59,15 @@
             width: 28%; 
             min-width: 280px; 
             transition: transform 0.3s ease;
+            text-decoration: none; /* 링크 밑줄 제거 */
+            color: inherit;        /* 기본 글자 색상 유지 */
+            display: block;        /* 카드 전체 영역 클릭 가능하도록 설정 */
+            box-sizing: border-box; /* 패딩이 크기에 영향을 주지 않도록 제한 */
         }
         .service-card:hover { transform: translateY(-10px); background: #2a2a2a; }
-        .service-card h3 { font-size: 22px; margin-bottom: 15px; color: #fff; }
-        .service-card p { color: #bbb; font-size: 15px; word-break: keep-all; }
-
+        .service-card h3 { font-size: 22px; margin-bottom: 15px; color: #fff; text-align: center; }
+        .service-card p { color: #bbb; font-size: 15px; word-break: keep-all; text-align: center; }
+        
         /* 스튜디오 장비 리스트 */
         .equipment-list { 
             text-align: left; 
@@ -107,25 +111,19 @@
     <section id="services" class="section">
         <h2>Our Services</h2>
         <div class="services">
-            <a href="recording.html" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    <h3>Recording</h3>
-                    <p>보컬, 악기, 성우 등 최상의 환경에서 진행되는 프로페셔널 레코딩. 넓고 쾌적한 부스를 제공합니다.</p>
-                </div>
+            <a href="recording.html" class="service-card">
+                <h3>Recording</h3>
+                <p>보컬, 악기, 성우 등 최상의 환경에서 진행되는 프로페셔널 레코딩. 넓고 쾌적한 부스를 제공합니다.</p>
             </a>
 
-            <a href="producing.html" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    <h3>Producing & Arrange</h3>
-                    <p>수많은 경험을 가진 뮤지션들의 작곡, 편곡 및 앨범 전체 프로듀싱과 MR 제작을 지원합니다.</p>
-                </div>
+            <a href="producing.html" class="service-card">
+                <h3>Producing & Arrange</h3>
+                <p>수많은 경험을 가진 뮤지션들의 작곡, 편곡 및 앨범 전체 프로듀싱과 MR 제작을 지원합니다.</p>
             </a>
 
-            <a href="mixing.html" style="text-decoration: none; color: inherit; display: block;">
-                <div class="service-card">
-                    <h3>Mixing & Mastering</h3>
-                    <p>디지털 싱글부터 정규 앨범까지, 최고급 콘솔과 아웃보드를 활용한 고음질 사운드 디자인을 구현합니다.</p>
-                </div>
+            <a href="mixing.html" class="service-card">
+                <h3>Mixing & Mastering</h3>
+                <p>디지털 싱글부터 정규 앨범까지, 최고급 콘솔과 아웃보드를 활용한 고음질 사운드 디자인을 구현합니다.</p>
             </a>
         </div>
     </section>
