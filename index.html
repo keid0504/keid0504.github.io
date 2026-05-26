@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMPIA Entertainment</title>
+    <style>
+        /* 웹사이트 전체 기본 스타일 (다크 테마) */
+        body { 
+            margin: 0; 
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif; 
+            background-color: #111; 
+            color: #fff; 
+            line-height: 1.6;
+        }
+
+        /* 상단 메뉴바 (네비게이션) */
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 50px; 
+            background: rgba(0, 0, 0, 0.8); 
+            position: fixed; 
+            width: 100%; 
+            box-sizing: border-box;
+            top: 0; 
+            z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; }
+        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: #f4a261; }
+
+        /* 메인 대문 (히어로 섹션) */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            /* 아래 URL이 배경 이미지입니다. 원하는 사진 주소로 바꿀 수 있습니다 */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 56px; margin-bottom: 10px; letter-spacing: 3px; }
+        .hero p { font-size: 20px; color: #ddd; font-weight: 300; }
+
+        /* 콘텐츠 영역 공통 스타일 */
+        .section { padding: 100px 20px; text-align: center; max-width: 1100px; margin: 0 auto; }
+        .section h2 { font-size: 36px; margin-bottom: 50px; color: #f4a261; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* 서비스 소개 박스 */
+        .services { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+        .service-card { 
+            background: #222; 
+            padding: 40px 30px; 
+            border-radius: 12px; 
+            width: 28%; 
+            min-width: 280px; 
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover { transform: translateY(-10px); background: #2a2a2a; }
+        .service-card h3 { font-size: 22px; margin-bottom: 15px; color: #fff; }
+        .service-card p { color: #bbb; font-size: 15px; word-break: keep-all; }
+
+        /* 스튜디오 장비 리스트 */
+        .equipment-list { 
+            text-align: left; 
+            background: #1a1a1a; 
+            padding: 40px; 
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .equipment-list p { color: #ccc; margin-bottom: 10px; font-size: 16px; }
+        .equipment-list strong { color: #fff; display: inline-block; width: 180px; }
+
+        /* 하단 정보 (푸터) */
+        footer { 
+            background: #000; 
+            padding: 50px 20px; 
+            text-align: center; 
+            color: #666; 
+            font-size: 14px; 
+        }
+        footer span { color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">AMPIA ENT</a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#equipment">Studio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>AMPIA Entertainment</h1>
+        <p>최고의 사운드를 완성하는 프리미엄 뮤직 프로덕션 & 레코딩 스튜디오</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Recording</h3>
+                <p>보컬, 악기, 성우 등 최상의 환경에서 진행되는 프로페셔널 레코딩. 넓고 쾌적한 부스를 제공합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3>Producing & Arrange</h3>
+                <p>수많은 경험을 가진 뮤지션들의 작곡, 편곡 및 앨범 전체 프로듀싱과 MR 제작을 지원합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mixing & Mastering</h3>
+                <p>디지털 싱글부터 정규 앨범까지, 최고급 콘솔과 아웃보드를 활용한 고음질 사운드 디자인을 구현합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipment" class="section">
+        <h2>Studio Equipment</h2>
+        <div class="equipment-list">
+            <p><strong>Console & Controller</strong> | Digidesign D-Command 24CH, Amek Tac Magnum 12CH</p>
+            <p><strong>DAW (Recording)</strong> | Avid Protools HD3, Steinberg Nuendo</p>
+            <p><strong>Converter & I/O</strong> | Digidesign 192 I/O, RME Fireface800</p>
+            <p><strong>Instruments</strong> | Yamaha Grand Piano 및 드럼 셋 등 다양한 악기 보유</p>
+            <br>
+            <p style="text-align: center; color: #f4a261; margin-top: 20px;">
+                재즈 트리오 동시 녹음 및 드럼 녹음이 가능한 쾌적하고 넓은 부스를 갖추고 있습니다.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p style="font-size: 18px; color: #fff; margin-bottom: 20px;">AMPIA Entertainment</p>
+        <p>
+            <span>주소 :</span> 서울특별시 00구 00동 000-0번지 2층 엠피아엔터테인먼트<br>
+            <span>전화 :</span> 02-0000-0000 | <span>이메일 :</span> ampiaent@ampiaent.com
+        </p>
+        <p style="margin-top: 30px;">Copyright © AMPIA Entertainment. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
