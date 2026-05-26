@@ -31,7 +31,13 @@
             z-index: 1000; 
             backdrop-filter: blur(5px);
         }
-        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; }
+        
+        /* 👇 여기가 수정되었습니다! (display: flex, align-items: center, gap: 12px 추가) */
+        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; display: flex; align-items: center; gap: 12px; }
+        
+        /* 👇 로고 이미지의 크기를 제한하는 코드가 새로 추가되었습니다. */
+        .logo img { height: 32px; width: auto; }
+        
         nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
         nav a:hover { color: #f4a261; }
 
@@ -99,13 +105,18 @@
 <body>
 
     <header>
-        <a href="#" class="logo">NodeRo studio</a>
+        <!-- 로고를 누르면 메인 화면으로 가도록 href="index.html"로 수정했습니다 -->
+        <a href="index.html" class="logo">
+            <!-- 👇 여기에 업로드하신 이미지 이름을 적어주세요 👇 -->
+            <img src="logo.png" alt="NodeRo 로고">
+            NodeRo studio
+        </a>
         <nav>
-            <a href="#services">Services</a>
-            <a href="#equipment">Studio</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#equipment">Studio</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
+    </header
 
     <section class="hero">
         <h1>NodeRo studio</h1>
