@@ -48,6 +48,42 @@
 
         footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
         footer span { color: #888; }
+
+        /* =========================================
+           ✨ 드래그 사진 슬라이더 CSS (새로 추가된 부분)
+        ========================================= */
+        .slider-container {
+            width: 100%;
+            overflow-x: auto; 
+            cursor: grab;     
+            margin-top: 40px;
+            margin-bottom: 10px;
+            user-select: none; 
+            -webkit-overflow-scrolling: touch; 
+            scrollbar-width: none;  
+            -ms-overflow-style: none;  
+        }
+        .slider-container::-webkit-scrollbar { display: none; }
+        .slider-container:active { cursor: grabbing; } 
+
+        .slider-track { display: flex; gap: 20px; padding-bottom: 10px; }
+        
+        .slide {
+            min-width: 280px; 
+            width: 45%;       
+            height: 220px;    
+            flex-shrink: 0;   
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            pointer-events: none; 
+        }
     </style>
 </head>
 <body>
@@ -108,6 +144,18 @@
                 <td>Yamaha Grand Piano (C3)<br>Pearl Reference Drum Set<br>다양한 기타/베이스 앰프 및 신디사이저</td>
             </tr>
         </table>
+
+        <h3 style="margin-top: 60px;">Studio Gallery</h3>
+        <div class="slider-container" id="sliderContainer">
+            <div class="slider-track">
+                <div class="slide"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80" alt="Studio View 1"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Microphone"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Studio Lights"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Audio Console"></div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #666; font-size: 13px; margin-top: 5px; letter-spacing: 0.5px;">➔ 좌우로 드래그하거나 스와이프하여 스튜디오 전경을 확인하세요.</p>
+
     </div>
 
     <footer>
@@ -132,5 +180,15 @@
         </p>
     </footer>
 
-</body>
-</html>
+    <script>
+        const slider = document.getElementById('sliderContainer');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => { isDown
