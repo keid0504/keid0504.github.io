@@ -10,7 +10,6 @@
     <style>
         body { margin: 0; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; background-color: #111; color: #fff; line-height: 1.6; }
         
-        /* 상단 메뉴바 (네비게이션) */
         header { 
             display: flex; 
             justify-content: space-between; 
@@ -25,16 +24,13 @@
             backdrop-filter: blur(5px);
         }
         
-        /* 👇 여기가 수정되었습니다! (display: flex, align-items: center, gap: 12px 추가) */
         .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; display: flex; align-items: center; gap: 12px; }
-        
-        /* 👇 로고 이미지의 크기를 제한하는 코드가 새로 추가되었습니다. */
+
         .logo img { height: 32px; width: auto; }
         
         nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
         nav a:hover { color: #f4a261; }
 
-        /* 서브페이지 전용 상단 타이틀 영역 */
         .sub-hero { 
             height: 40vh; 
             display: flex; align-items: center; justify-content: center; 
@@ -43,10 +39,8 @@
         }
         .sub-hero h1 { font-size: 40px; letter-spacing: 2px; color: #f4a261; }
 
-        /* 상세 내용 본문 영역 */
         .detail-content { max-width: 800px; margin: 60px auto 100px auto; padding: 0 20px; text-align: left; }
         
-        /* 정보 박스 디자인 */
         .info-box { background: #1a1a1a; padding: 30px; border-radius: 12px; margin-bottom: 30px; display: flex; flex-direction: column; gap: 15px; border: 1px solid #333; }
         .info-row { display: flex; align-items: flex-start; border-bottom: 1px solid #2a2a2a; padding-bottom: 15px; }
         .info-row:last-child { border-bottom: none; padding-bottom: 0; }
@@ -55,7 +49,6 @@
         .info-desc a { color: #ccc; text-decoration: none; transition: 0.3s; border-bottom: 1px solid #555; padding-bottom: 2px; }
         .info-desc a:hover { color: #f4a261; border-color: #f4a261; }
 
-        /* 푸터 */
         footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
         footer span { color: #888; }
     </style>
@@ -63,9 +56,7 @@
 <body>
 
     <header>
-        <!-- 로고를 누르면 메인 화면으로 가도록 href="index.html"로 수정했습니다 -->
         <a href="index.html" class="logo">
-            <!-- 👇 여기에 업로드하신 이미지 이름을 적어주세요 👇 -->
             <img src="logo.png" alt="NodeRo 로고">
             NodeRo studio
         </a>
